@@ -5,4 +5,4 @@ layout: default
 ---
 # Introduction
 
-## [DigiDocService comparision](../digiDocService-comparision)
+## [DigiDocService comparision](../digidocservice-comparision)
