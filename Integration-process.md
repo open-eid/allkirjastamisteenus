@@ -8,3 +8,4 @@ layout: default
 # Assesing the cost
 
 # Application
+Test text to be seen.
