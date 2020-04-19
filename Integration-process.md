@@ -3,9 +3,9 @@ title: Integration process
 permalink: /integration-process/
 layout: default
 ---
-# Analyzing the need
+## Analyzing the need
 
-# Assesing the cost
+## Assesing the cost
 
-# Application
+## Application
 Test text to be seen.
