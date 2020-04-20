@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Service update on 18.04.2020"
+title:  "We are live"
 date:   2020-04-19 10:42:37 +0300
 categories: jekyll update
 ---
