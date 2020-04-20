@@ -6,11 +6,11 @@ layout: default
 
 ## Introduction
 
-This document compares SiGa service and DigiDocService (both container and Mobile-ID features). This should give an overview of possible changes needed to migrate.
+This document compares Riigi allkirjastamisteenus service and DigiDocService (both container and Mobile-ID features). This should give an overview of possible changes needed to migrate.
 
 ## Differences in functionality
 
-| **Functionality** | **DigiDocService** | **SiGa** |  **Comment** | 
+| **Functionality** | **DigiDocService** | **Riigi allkirjastamisteenus** |  **Comment** | 
 |-------------------|--------------------|----------|--------------|
 | Container creation | Yes | Yes | Creating new containers |
 | Adding signatures | Yes | Yes | Adding signatures to signed containers |
@@ -18,10 +18,10 @@ This document compares SiGa service and DigiDocService (both container and Mobil
 | Support for DDOC container | Yes | **No** | Not possible to use |
 | Container hashcode form | Yes | Yes | Same hashcode format |
 | Signing with external device | Yes | Yes | ID card, e-seal, ... (certificate must be in Estonian TSL) |
-| Signing with Mobile-ID | Yes | Yes | SiGa supports only Estonian Mobile-ID |
-| Authentication with Mobile-ID | Yes | **No** | SiGa is purely signing/container service, use TARA for authentication |
+| Signing with Mobile-ID | Yes | Yes | Riigi allkirjastamisteenus supports only Estonian Mobile-ID |
+| Authentication with Mobile-ID | Yes | **No** | Riigi allkirjastamisteenus is purely signing/container service, use TARA for authentication |
 | Verification of certificate validity | Yes | **No** | Not possible to validate |
-| Signature validation | Yes | Yes | SiGA uses Valideerimisteenus (SIVA) for validation |
+| Signature validation | Yes | Yes | Riigi allkirjastamisteenus uses Valideerimisteenus (SIVA) for validation |
 
 
 
@@ -29,7 +29,7 @@ This document compares SiGa service and DigiDocService (both container and Mobil
 
 ### General differences
 
-| **General differences** | **DigiDocService** | **SiGa** |  **Comment** | 
+| **General differences** | **DigiDocService** | **Riigi allkirjastamisteenus** |  **Comment** | 
 |-------------------------|--------------------|----------|--------------|
 | Protocol | SOAP/XML | REST/JSON | API is described in WADL |
 | Hashcode container format | DigiDocService | DigiDocService | Same hahscode container format is used |
@@ -37,9 +37,9 @@ This document compares SiGa service and DigiDocService (both container and Mobil
 
 ### Method differences 
 
-| **DigiDocService** | **SiGa** | **Comment** | 
+| **DigiDocService** | **Riigi allkirjastamisteenus** | **Comment** | 
 |--------------------|----------|-------------|
-| StartSession | - | "Session" is started in SiGa with upload or creation of container |
+| StartSession | - | "Session" is started in Riigi allkirjastamisteenus with upload or creation of container |
 | CloseSession | DELETE: /hashcodecontainers/ {containerId} | |
 | CreateSignedDoc | POST: /hashcodecontainers | |
 | AddDataFile | POST: /hashcodecontainers/ {containerId}/datafiles | | 
@@ -49,7 +49,7 @@ This document compares SiGa service and DigiDocService (both container and Mobil
 | GetSignedDoc | GET: /hashcodecontainers/ {containerId} | |
 | GetDataFile | GET: /hashcodecontainers/ {containerId}/datafiles | Retriever hashcode representation of data files |
 | RemoveDataFile | DELETE: /hashcodecontainers/ {containerId}/datafiles/{fileName} | |
-| RemoveSignature | - | Not supported in SiGa |
+| RemoveSignature | - | Not supported in Riigi allkirjastamisteenus |
 | GetSignersCertificate | - | Available through GET: /hashcodecontainers/ {containerId}/signatures/{signatureId} method |
 | GetNotarysCertificate | - | Available through GET: /hashcodecontainers/ {containerId}/signatures/{signatureId} method |
 | GetNotary | - | Not possible |
@@ -70,19 +70,19 @@ This document compares SiGa service and DigiDocService (both container and Mobil
 
 ### Create container and sign with MID 
 
-| **DigiDocService** | **SiGa** |  **Comment** | 
+| **DigiDocService** | **Riigi allkirjastamisteenus** |  **Comment** | 
 |----------|--------------------|--------------|
 | [![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Create_and_sign_MID_DDS.png)](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Create_and_sign_MID_DDS.png) | [![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Create_and_sign_MID.png)](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Create_and_sign_MID.png) | The flows have identical steps |
 
 ### Upload container and sign with ID card
 
-| **DigiDocService** | **SiGa** |  **Comment** | 
+| **DigiDocService** | **Riigi allkirjastamisteenus** |  **Comment** | 
 |----------|--------------------|--------------|
 | [![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Upload_and_sign_externally_DDS.png)](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Upload_and_sign_externally_DDS.png) | [![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Upload_and_sign_externally.png)](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Upload_and_sign_externally.png) | The flows have identical steps |
 
 ## Validate signature 
 
-| **DigiDocService** | **SiGa** |  **Comment** | 
+| **DigiDocService** | **Riigi allkirjastamisteenus** |  **Comment** | 
 |----------|--------------------|--------------|
 | [![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Validation_DDS.png)](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Validation_DDS.png) | [![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Validation.png)](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/Validation.png) | Flows are different |
 

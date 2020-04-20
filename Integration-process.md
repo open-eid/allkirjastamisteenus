@@ -3,9 +3,12 @@ title: Integration process
 permalink: /integration-process/
 layout: default
 ---
-## Analyzing the need
+## Demo environment
 
-## Assesing the cost
+Demo environment URL: https://dsig-demo.eesti.ee
 
-## Application
-Test text to be seen.
+[Application](https://www.ria.ee/sites/default/files/content-editors/EID/demo_liitumistaotlus_0.pdf) for joining with Demo environment
+
+## Production environment
+
+Production environment URL: https://dsig.eesti.ee
