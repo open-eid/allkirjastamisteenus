@@ -34,9 +34,9 @@ plugins:
 
 header_pages:
   - Business-description.md
+  - Technical-description.md
   - Json-technical-description.md
   - Soap-technical-description.md
-  - Integration-process.md
   - News.md
 # Exclude from processing.
 # The following items will not be processed, by default.

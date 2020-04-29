@@ -13,7 +13,7 @@ layout: default
 
 ## Introduction
 
-Riigi allkirjastamisteenus offers a SOAP based interface for **legacy systems** currently using DigiDocService. It is **strongly recommended** to use JSON based api for integration.
+Riigi allkirjastamisteenus offers a SOAP based interface for **legacy systems** currently using DigiDocService. It is **strongly recommended** to use JSON based api for integration even if you currently use DigiDocService.
 
 SOAP interface is based on SK ID Solutions AS [DigiDocService API](http://sk-eid.github.io/dds-documentation/) however, it do not implement the full functionality.
 Current e-service integration needs to be analyzed in regards of suitability for switching to Riigi allkirjastamisteenus and some changes in integration may be required.

@@ -15,7 +15,7 @@ layout: default
 
 Riigi allkirjastamisteenus is based on [Signature Gateway software](https://github.com/open-eid/SiGa), however it do not offer all the functionality present in the software.
 
-Following chanpers describe offered functionality.
+Following chapters describe offered functionality.
 
 ## Functionality
 
