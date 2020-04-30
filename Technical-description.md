@@ -19,7 +19,9 @@ requirements and architecture.
 
 ### 1. Signing files with ID card from user point of view
 
-1.1 User uploads files in e-service to be signed.
+In this example e-service handles all actions regarding signable data files before opening session with Riigi allkirjastamisteenus.
+
+1.1 User selects files in e-service to be signed.
 
 1.2 User inserts ID-Card to reader.
 
@@ -29,7 +31,7 @@ requirements and architecture.
 
 1.5 PIN prompt is presented, user inserts PIN2 and presses OK.
 
-1.6 Signing process completed status is shown in e-service.
+1.6 User checks that signing was successful.
 
 1.7 User downloads the signed container.
 
@@ -46,23 +48,35 @@ before sending to signing.
 
 ### 2. Signing files with Mobile-ID
 
-2.1 User uploads or chooses files in e-service to be signed.
-2.2 User inserts ID-Card to reader.
-2.3 User presses sign with Mobile-ID button.
-2.4 User inserts personal identification code and mobile phone number and presses sign.
-2.5 Verification code is shown in e-service.
-2.6 PIN prompt is presented in users mobile together with verification code.
-2.7 If verification code shown in e-service and mobile phone match, user inserts PIN2 and presses Ok.
-2.7 Signing process completed status is shown in e-service.
-2.7 User downloads the signed container.
+2.1 User uploads file in e-service to be signed.
+
+2.2 User removes file to be signed.
+
+2.3 User uploads file in e-service to be signed.
+
+2.4 User presses sign with Mobile-ID button.
+
+2.5 User inserts personal identification code and mobile phone number and presses sign.
+
+2.6 User checks verification code in e-service.
+
+2.7 PIN prompt is presented in users mobile together with verification code.
+
+2.8 If verification code shown in e-service and mobile phone match, user inserts PIN2 and presses Ok.
+
+2.9 User checks that signing was successful.
+
+2.10 User moves to next step in e-service flow.
+
+![](../img/MID_flow.png)
+
 
 ### 3. Adding signature to already signed container
 
-3.1 User uploads or chooses signed container in e-service to be signed.
-3.2 User inserts ID-Card to reader.
-3.3 User presses sign with ID-Card button.
-3.4 Select certificate prompt is presented, user selects correct certificate.
-3.5 PIN prompt is presented, user inserts PIN2 and presses OK.
-3.6 Signing process completed status is shown in e-service.
-3.7 User downloads the signed container.
+3.1 User uploads signed container in e-service to be signed.
 
+3.2 User verifies the signature statuses
+
+3.3 User starts signing process (step 1.2 or 2.4 in previous examples)
+
+![](../img/Add_signature_flow.png)
