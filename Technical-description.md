@@ -6,7 +6,8 @@ layout: default
 | Table of contents |
 |-------------------|
 |[Introduction](#introduction)|
-|[Usage flows from user perspective](#Usage-flows-from-user-perspective)|
+|[Usage flows from user perspective](#usage-flows-from-user-perspective)|
+|[Implementations needed in e-service](#implementations-needed-in-e-service)|
 
 
 ## Introduction
@@ -14,6 +15,8 @@ layout: default
 Below are generalized examples how to implement user signing process in e-service. The examples are given based on [HWCrypto library](https://github.com/hwcrypto/hwcrypto.js)
 usage in front end for ID-Card signing. The sequences and actions taken are only for demonstration, the actual flow and implementation should be based on integrating e-service
 requirements and architecture.
+
+The example code in JAVA with explicit API demonstration can be found [here](https://github.com/open-eid/SiGa/tree/master/siga-sample-application) together with [instructions how to run the Signature Gateway with Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) for learning purposes.
 
 ## Usage flows from user perspective
 
@@ -80,3 +83,29 @@ before sending to signing.
 3.3 User starts signing process (step 1.2 or 2.4 in previous examples)
 
 ![](../img/Add_signature_flow.png)
+
+## Implementations needed in e-service
+
+In orded to integrate with Digital Signature Gateway service following functionality must be implemented in integrating service in addition of API integration.
+
+### Authorization
+
+To access the service authorization must be implemented. The specifics are [described here.](https://github.com/open-eid/SiGa/wiki/Authorization)
+
+### Calculating data file hashes
+
+Digital Signature Gateway service supports only hashcode form. Therefor ability to calculate data file hashes is needed. The integrating service needs to calculate SHA256 and SHA512 hashes of data files.
+
+### Converting container to and from hashcode form
+
+Digital Signature Gateway service handles containers in hashcode form. Integrating service needs to be able to manipulate the container content by adding and removing files in it. ASICE/BDOC container is 
+ZIP container, it can be manipulated with standard ZIP libraries. However, special care must be taken on some aspects of the container [described here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form)
+
+### Integration with signature creation devices
+
+To use remote signing in Digital Signature Gateway service, integrating service must implement retrieving public certificate and signing hashes with the signature creation device. 
+The integrations required are signature creation device specific (it can be e-seal using PKCS11, ID-Card with HWCrypto or Smart-ID with Smart-ID API) 
+
+### Additional consideration
+
+Please check [here](https://github.com/open-eid/SiGa/wiki/Best-practices) for additional implementation considerations.

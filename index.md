@@ -6,7 +6,6 @@ layout: home
 ---
 ![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/EL_Regionaalarengu_Fond_horisontaalne-vaike.jpg)
 
-## Welcome to the Riigi allkirjastamisteenus!
+## Welcome to the Digital Signature Gateway service (Riigi allkirjastamisteenus)!
 
-
-This page contains information regarding container and signature creation service. 
+Here you can find information about Digital Signature Gateway service (Riigi allkirjastamisteenus).

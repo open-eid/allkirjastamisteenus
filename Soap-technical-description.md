@@ -8,47 +8,54 @@ layout: default
 |[Introduction](#introduction)|
 |[Access to the service](#access-to-the-service)|
 |[Differences in functionality](#differences-in-functionality)|
+|[Hashcode Container form](#hashcode-container-form)|
 |[Differences in protocol](#differences-in-protocol)|
 |[Differences in error handling](#differences-in-error-handling)|
 
 ## Introduction
 
-Riigi allkirjastamisteenus offers a SOAP based interface for **legacy systems** currently using DigiDocService. It is **strongly recommended** to use JSON based api for integration even if you currently use DigiDocService.
+Digital Signature Gateway service (Riigi allkirjastamisteenus) offers a SOAP based interface for **legacy systems** currently using DigiDocService. It is **strongly recommended** to use JSON based api for integration even if you currently use DigiDocService.
 
-SOAP interface is based on SK ID Solutions AS [DigiDocService API](http://sk-eid.github.io/dds-documentation/) however, it do not implement the full functionality.
-Current e-service integration needs to be analyzed in regards of suitability for switching to Riigi allkirjastamisteenus and some changes in integration may be required.
+SOAP interface is based on SK ID Solutions AS [DigiDocService API](../dds-api) however, it do not implement the full functionality.
+Current e-service integration needs to be analyzed in regards of suitability for switching to Digital Signature Gateway service and some changes in integration may be required.
 
 If required changes are substantial we suggest integrating JSON interface instead of SOAP interface.
 
-For analyzing whether the Riigi allkirjastamisteenus SOAP interface is suitable for your integration please revise the below chapters.
+For analyzing whether the Digital Signature Gateway service SOAP interface is suitable for your integration please revise the below chapters.
 
 ## Access to the service
 
-Accessing the service is IP based. See [Integration process](../integration-process) page for information how to gain access to service.
+Accessing the service is IP based, it is needed to register for usage. See [Information System Authority](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus) webpage for registration info.
 
 ## Differences in functionality
 
-| **Functionality** | **DigiDocService** | **Riigi allkirjastamisteenus** |  **Comment** | 
+| **Functionality** | **DigiDocService** | **Digital Signature Gateway service** |  **Comment** | 
 |-------------------|--------------------|----------|--------------|
 | Container creation | Yes | Yes | Creating new containers |
 | Adding signatures | Yes | Yes | Adding signatures to signed containers |
-| Support for BDOC and ASICE containers | Yes | Yes | Riigi allkirjastamisteenus supports the hashcode form. No datafiles support. |
+| Support for BDOC and ASICE containers | Yes | Yes | Digital Signature Gateway service supports the hashcode form. No datafiles support. |
 | Support for DDOC container | Yes | **No** | Not possible to use |
 | Container hashcode form | Yes | Yes | Same hashcode format |
 | Signing with external device | Yes | Yes | ID card, e-seal, ... (certificate must be in Estonian TSL) |
-| Signing with Mobile-ID | Yes | Yes | Riigi allkirjastamisteenus supports only Estonian Mobile-ID |
-| Authentication with Mobile-ID | Yes | **No** | Riigi allkirjastamisteenus is purely signing/container service, use TARA for authentication |
+| Signing with Mobile-ID | Yes | Yes | Digital Signature Gateway service supports only Estonian Mobile-ID |
+| Authentication with Mobile-ID | Yes | **No** | Digital Signature Gateway service is purely signing/container service, use TARA for authentication |
 | Verification of certificate validity | Yes | **No** | Not possible to validate |
-| Signature validation | Yes | Yes | Riigi allkirjastamisteenus uses Valideerimisteenus (SIVA) for validation |
+| Signature validation | Yes | Yes | Digital Signature Gateway service uses Valideerimisteenus (SIVA) for validation |
 
+## Hashcode container form
+
+Digital Signature Gateway service supports only hashcode based data files manipulation. This means that signed data files are not leaving the integrating e-service premises giving protection to the content. 
+In addition this enables to sign large data files as hashcode representation of the file is not tied to the size of real file.
+
+The details how to convert containers to and from hashcode form can be found [here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form)
 
 ## Differences in protocol
 
-Riigi allkirjastamisteenus only supports Digital Signature API. No methods for authentication are supported.
+Digital Signature Gateway service only supports Digital Signature API. No methods for authentication are supported.
 
 ### Method differences 
 
-| **Method** | **DigiDocService** | **Riigi allkirjastamisteenus** | **Comment** | 
+| **Method** | **DigiDocService** | **Digital Signature Gateway service** | **Comment** | 
 |--------------------|----------|-------------|
 | StartSession | Yes | Yes | Difference in supported parameters. For details check [here.](#startsession) |
 | CloseSession | Yes | Yes | No difference in parameters. |
@@ -119,7 +126,7 @@ Riigi allkirjastamisteenus only supports Digital Signature API. No methods for a
 
 | **Parameter** | **Comment** | 
 |---------------|-------------|
-| DataFileId |  Value is not "Dxx format, where xx stands for the sequence number." format. In SignedDocInfo created by Riigi allkirjastamisteenus, the "Id" field on DataFileInfo is the fileName. |
+| DataFileId |  Value is not "Dxx format, where xx stands for the sequence number." format. In SignedDocInfo created by Digital Signature Gateway service, the "Id" field on DataFileInfo is the fileName. |
 
 #### **PrepareSignature**
 
@@ -137,8 +144,19 @@ Riigi allkirjastamisteenus only supports Digital Signature API. No methods for a
 
 ## Differences in error handling
 
-DigiDocService uses jDigiDoc library as basis of its implementation. Riigi allkirjastamisteenus uses DigiDoc4J as the base library. This means that error messages are not homogenous.
+DigiDocService uses jDigiDoc library as basis of its implementation. Digital Signature Gateway service uses DigiDoc4J as the base library. This means that error messages are not same between the services. If integrating e-service handles the error messages specifically then changes in implementation are needed.
 
-If integrating e-service handles the error messages specifically then changes in implementation are needed.
+In addition MID-REST service for Mobile-ID do not offer same statuses as DigiDocService offered for Mobile-ID. 
 
+Here are examples of differences in SOAP error codes.
 
+| **DigiDocService** | **Digital Signature Gateway service** | **Comment** | 
+|--------------------|----------|-------------|
+| 103 | No | Not supported. |
+| 105 | No |  Not supported. |
+| 201 | No | Not supported. |
+| 202 | No |  Not supported. |
+| 203 | No | Not supported. |
+| 303 | 302 |  MID-Rest service sends always the same status. |
+| 304 | 302 |  MID-Rest service sends always the same status. |
+| 305 | 302 |  MID-Rest service sends always the same status. |
