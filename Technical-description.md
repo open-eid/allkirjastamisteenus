@@ -8,7 +8,7 @@ layout: default
 |[Introduction](#introduction)|
 |[Usage flows from user perspective](#usage-flows-from-user-perspective)|
 |[Implementations needed in e-service](#implementations-needed-in-e-service)|
-
+|[Testing the integration](#testing-the-integration)|
 
 ## Introduction
 
@@ -109,3 +109,17 @@ The integrations required are signature creation device specific (it can be e-se
 ### Additional consideration
 
 Please check [here](https://github.com/open-eid/SiGa/wiki/Best-practices) for additional implementation considerations.
+
+## Testing the integration
+
+Successful integration with [Demo environment](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus) is requirement for using Digital Signature Gateway service in production. For development and learning it is possible to set up the Signature Gateway software in local premises using [Docker.](https://github.com/open-eid/SiGa#running-siga-with-docker)
+However, as Digital Signature Gateway service do not fully offer Signature Gateway functionality and there may be version differences between service and available software it is recommended to always use Demo environment for acceptance testing.
+
+
+### Special considerations for testing
+
+* Authorization - be sure to check that correct [URL encododing rules](https://github.com/open-eid/SiGa/wiki/Authorization#url-encoding-rules) and charset encoding is used. Verify that different [HMAC algorithms](https://github.com/open-eid/SiGa/wiki/Authorization#headers) are supported.
+* Hashcode container form - Make sure that all data files are removed from hashcode container before sending to service. Ensure that the final container is converted correctly to normal form by using DigiDoc4 client as reference (can not be used with test certificates for signature validation but it should not give any container errors).
+* Mobile-ID signing - Ensure that challengeID/verification code is correctly shown to customer. Test the negative cases ([Mobile-ID testnumbers can be found here](https://github.com/SK-EID/MID/wiki/Test-number-for-automated-testing-in-DEMO)) and ensure that user is given correct feedback. Also test timeouts as signing with Mobile-ID can take time. Ensure that user can not activate signing several times (by clicking the sign button repeatedly) on one signing process.
+* Signing with ID card - Test insertion of card in different steps of the signing flow (before clicking sign, after clicking sign...). Ensure that user can not activate signing several times (by clicking the sign button repeatedly) on one signing process.
+* Validation result - Test both valid and invalid containers to ensure that correct result is shown for user.
