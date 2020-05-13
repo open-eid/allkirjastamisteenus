@@ -29,10 +29,10 @@ Accessing the service is IP based, it is needed to register for usage. See [Info
 
 ## Differences in functionality
 
-| **Functionality** | **DigiDocService** | **Digital Signature Gateway service** |  **Comment** | 
+| **Functionality** | **DigiDocService** | **Digital Signature Gateway service SOAP** |  **Comment** | 
 |-------------------|--------------------|----------|--------------|
 | Container creation | Yes | Yes | Creating new containers |
-| Adding signatures | Yes | Yes | Adding signatures to signed containers |
+| Adding signatures | Yes | Yes | Adding signatures to containers |
 | Support for BDOC and ASICE containers | Yes | Yes | Digital Signature Gateway service supports the hashcode form. No datafiles support. |
 | Support for DDOC container | Yes | **No** | Not possible to use |
 | Container hashcode form | Yes | Yes | Same hashcode format |
@@ -55,7 +55,7 @@ Digital Signature Gateway service only supports Digital Signature API. No method
 
 ### Method differences 
 
-| **Method** | **DigiDocService** | **Digital Signature Gateway service** | **Comment** | 
+| **Method** | **DigiDocService** | **Digital Signature Gateway service SOAP** | **Comment** | 
 |--------------------|----------|-------------|
 | StartSession | Yes | Yes | Difference in supported parameters. For details check [here.](#startsession) |
 | CloseSession | Yes | Yes | No difference in parameters. |

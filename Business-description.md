@@ -33,7 +33,7 @@ Application for joining must be sent to help@ria.ee. Application forms can be fo
 
 ## Whats the difference between Digital Signature Gateway service and DigiDocService?
 
-Riigi allkirjastamisteenus offers two different services for integration (JSON and SOAP). JSON based service is new signing service intended to replace DigiDocService.
+Digital Signature Gateway service offers two different services for integration (JSON and SOAP). JSON based service is new signing service intended to replace DigiDocService.
 SOAP service is intended for legacy systems for easier transition. Both of the services have differences in functionality compared to DigiDocService.
 
 ### Differences in functionality
@@ -41,15 +41,15 @@ SOAP service is intended for legacy systems for easier transition. Both of the s
 | **Functionality** | **DigiDocService** | **Digital Signature Gateway service** |  **Comment** | 
 |-------------------|--------------------|----------|--------------|
 | Container creation | Yes | Yes | Creating new containers |
-| Adding signatures | Yes | Yes | Adding signatures to signed containers |
+| Adding signatures | Yes | Yes | Adding signatures to containers |
 | Support for BDOC and ASICE containers | Yes | Yes | Supports the hashcode form |
 | Support for DDOC container | Yes | **No** | Not possible to use |
 | Container hashcode form | Yes | Yes | Same hashcode format |
 | Signing with external device | Yes | Yes | ID card, e-seal, ... (certificate must be in Estonian TSL) |
-| Signing with Mobile-ID | Yes | Yes | Riigi allkirjastamisteenus supports only Estonian Mobile-ID |
-| Authentication with Mobile-ID | Yes | **No** | Riigi allkirjastamisteenus is purely signing/container service, use TARA for authentication |
+| Signing with Mobile-ID | Yes | Yes | Digital Signature Gateway service supports only Estonian Mobile-ID |
+| Authentication with Mobile-ID | Yes | **No** | Digital Signature Gateway service is purely signing/container service, use TARA for authentication |
 | Verification of certificate validity | Yes | **No** | Not possible to validate |
-| Signature validation | Yes | Yes | Riigi allkirjastamisteenus uses Valideerimisteenus (SIVA) for validation |
+| Signature validation | Yes | Yes | Digital Signature Gateway service uses Valideerimisteenus (SIVA) for validation |
 
 ### Differences in protocol
 
@@ -61,4 +61,4 @@ SOAP service is intended for legacy systems for easier transition. Both of the s
 
 ## Additional questions?
 
-Feel free to write help@ria.ee for any questions about Riigi allkirjastamisteenus.
+Feel free to write help@ria.ee for any questions about Digital Signature Gateway service.

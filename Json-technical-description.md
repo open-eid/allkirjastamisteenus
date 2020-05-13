@@ -25,7 +25,7 @@ The authorization mechanism is described [here](https://github.com/open-eid/SiGa
 
 ## Functionality
 
-| **Functionality** | **Signature Gateway ** | **Digital Signature Gateway service** |  **Comment** | 
+| **Functionality** | **Signature Gateway software ** | **Digital Signature Gateway service JSON** |  **Comment** | 
 |-------------------|--------------------|----------|--------------|
 | Container creation | Yes | Yes | Only **hashcode** form. |
 | Manipulation of signable content | Yes | Yes | Only **hashcode** form "data files". |

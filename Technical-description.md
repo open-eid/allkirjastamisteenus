@@ -12,8 +12,8 @@ layout: default
 
 ## Introduction
 
-Below are generalized examples how to implement user signing process in e-service. The examples are given based on [HWCrypto library](https://github.com/hwcrypto/hwcrypto.js)
-usage in front end for ID-Card signing. The sequences and actions taken are only for demonstration, the actual flow and implementation should be based on integrating e-service
+Below are generalized examples how user signing process in e-service can take place. In the flows of ID-card signing [HWCrypto library](https://github.com/hwcrypto/hwcrypto.js)
+is used in front end for commucating with ID-card. The sequences in this chapter are for demonstration, the actual flow and implementation should be based on integrating e-service
 requirements and architecture.
 
 The example code in JAVA with explicit API demonstration can be found [here](https://github.com/open-eid/SiGa/tree/master/siga-sample-application) together with [instructions how to run the Signature Gateway with Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) for learning purposes.
@@ -22,7 +22,7 @@ The example code in JAVA with explicit API demonstration can be found [here](htt
 
 ### 1. Signing files with ID card from user point of view
 
-In this example e-service handles all actions regarding signable data files before opening session with Riigi allkirjastamisteenus.
+In this example e-service handles all actions regarding signable data files before opening session with Digital Signature Gateway service (Riigi allkirjastamisteenus).
 
 1.1 User selects files in e-service to be signed.
 
@@ -40,7 +40,7 @@ In this example e-service handles all actions regarding signable data files befo
 
 ![](../img/ID_card_flow.png)
 
-*(1) To start signature creation, signers certificate is needed in Riigi allkirjastamisteenus. In this example [HWCrypto getCertificate()](https://github.com/hwcrypto/hwcrypto.js/wiki/APIv2#getcertificate) is used to fetch the certificate.
+*(1) To start signature creation, signers certificate is needed in Digital Signature Gateway service. In this example [HWCrypto getCertificate()](https://github.com/hwcrypto/hwcrypto.js/wiki/APIv2#getcertificate) is used to fetch the certificate.
 It is important that **signing certificate** (nonrepudiation key-usage must be present) is fetched. Signing process can not be completed with authentication certificate. 
 
 *(2) This step is needed by the [HWCrypto](https://github.com/hwcrypto/hwcrypto.js/wiki/APIv2#sign) as it requires hash value. Other signing libraries may require raw data, in that case dataToSign may only be base64 decoded
@@ -86,11 +86,15 @@ before sending to signing.
 
 ## Implementations needed in e-service
 
-In orded to integrate with Digital Signature Gateway service following functionality must be implemented in integrating service in addition of API integration.
+In orded to integrate with Digital Signature Gateway service following functionality must be implemented in e-service.
 
 ### Authorization
 
 To access the service authorization must be implemented. The specifics are [described here.](https://github.com/open-eid/SiGa/wiki/Authorization)
+
+### API integration
+
+Digital Signature Gateway service offers [following methods](https://open-eid.github.io/allkirjastamisteenus/json-technical-description/#hashcode-api-description).
 
 ### Calculating data file hashes
 
