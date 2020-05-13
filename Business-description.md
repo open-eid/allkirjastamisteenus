@@ -6,7 +6,8 @@ layout: default
 ## What is it?
 
 Digital Signature Gateway service (Riigi allkirjastamisteenus) is a service for creating and signing ASIC-E and BDOC containers in a HASHCODE form. 
-The service supports signing with Estonian ID-Card/e-token and with Estonian Mobile-ID. 
+
+The service supports signature creation with Estonian ID-card/e-token (signing with ID-card/e-token must be still implemented in e-service) and with Estonian Mobile-ID. 
 
 The service also supports validation of ASIC-E, BDOC and DDOC containers in hashcode form. 
 
@@ -14,8 +15,12 @@ If your e-service is currently using DigiDocService for container creation, take
 
 ## What are the benefits?
 
-Integration with Digital Signature Gateway service enables to have container and signature creation from single service with single contract. It do not require extra contract and integration for Mobile-ID or trust services
-like Time Stamps and OCSP-s.
+Digital Signature Gateway service offers unified API for container and signature creation. No need for extra integration with Mobile-ID or trust services. 
+API is platform independent and can be used in any e-service capable of handling JSON/REST API.
+
+Only one contract is needed to get access container and signature creation. No need for handling contracts and billing with different parties. 
+
+Digital Signature Gateway service is kept up to date with security patches and compliant with signature standards. E-service maintenance is limited to the updates for API integration. 
 
 ## Whom is it for?
 
