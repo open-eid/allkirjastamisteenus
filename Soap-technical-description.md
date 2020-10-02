@@ -157,6 +157,7 @@ Here are examples of differences in SOAP error codes.
 | 201 | No | Not supported. |
 | 202 | No |  Not supported. |
 | 203 | No | Not supported. |
-| 303 | 302 |  MID-Rest service sends always the same status. |
-| 304 | 302 |  MID-Rest service sends always the same status. |
-| 305 | 302 |  MID-Rest service sends always the same status. |
+| 302 | 301 |  MID-Rest service sends always the same status. |
+| 303 | 301 |  MID-Rest service sends always the same status. |
+| 304 | 301 |  MID-Rest service sends always the same status. |
+| 305 | 301 |  MID-Rest service sends always the same status. |
