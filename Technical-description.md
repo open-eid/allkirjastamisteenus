@@ -122,7 +122,7 @@ However, Digital Signature Gateway service does not offer Signature Gateway full
 For acceptance testing it is recommended to always use Demo environment.
 
 **NB!** It is only possible to test with TEST certificates in DEMO environment. This includes ID-Cards, Mobile-ID, e-Seals, etc. Signing certificate issuer must be present in [TEST TSL](https://github.com/open-eid/test-TL/blob/master/EE_T.xml) to be accepted by 
-Digital Signature Gateway service. You can order TEST ID-Card/TEST e-Seal [here](https://www.skidsolutions.eu/en/services/testcard/) and use Demo Mobile-ID numbers from [here](https://github.com/SK-EID/dds-documentation/wiki/Test-number-for-automated-testing-in-DEMO).
+Digital Signature Gateway service. You can order TEST ID-Card/TEST e-Seal [here](https://www.skidsolutions.eu/en/services/testcard/) and use Demo Mobile-ID numbers from [here](https://github.com/SK-EID/MID/wiki/Test-number-for-automated-testing-in-DEMO).
 You can activate and/or change the status of your TEST certificates in [here](https://demo.sk.ee/upload_cert/) to test signing with revoked/unknown certificate.
 Uploading your LIVE certificate to DEMO OCSP service or activating your LIVE Mobile-ID in DEMO MID service do NOT enable to usage of LIVE certificates in Digital Signature Gateway service. 
 
