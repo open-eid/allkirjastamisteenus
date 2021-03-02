@@ -3,67 +3,66 @@ title: Business description
 permalink: /business-description/
 layout: default
 ---
-## What is it?
+## How does SiGa work?
 
-Digital Signature Gateway service (Riigi allkirjastamisteenus) is a service for creating and signing ASIC-E and BDOC containers in a HASHCODE form. 
+Digital Signature Gateway service (SiGa) is a back end service that interacts with other information services and systems. It means SiGa provides the functionality of creation and validation of electronic signatures, but does not offer any graphical user interface to end users. Thus, the graphic design and screen layout presented to end users, signers, will vary across SiGa customers (i.e. other information systems).
 
-The service supports signature creation with Estonian ID-card/e-token (signing with ID-card/e-token must be still implemented in e-service) and with Estonian Mobile-ID. 
+To ensure confidentiality, SiGa processes the digital footprint of a document, also known as [hash](https://sectigostore.com/blog/what-is-a-digital-signature-and-how-does-the-digital-signature-process-work/), and not the document itself.
+The simplified document signing steps are as follows:
+1. SiGa receives the hash value and basic signature of a document to be signed.
+2. SiGa interacts with [trust services](https://www.id.ee/en/article/trust-services-what-are-they/) to collect the details that are mandatory elements of a [qualified electronic signature](https://www.id.ee/en/article/electronic-signatures-and-addressing-them-in-europe-2/), e.g. the timestamp and the validity confirmation of the signer’s [certificate](https://www.id.ee/en/article/certificates-what-are-they-and-why-do-i-need-them/).
+3. SiGa returns the correctly signed container to the signer.
 
-The service also supports validation of ASIC-E, BDOC and DDOC containers in hashcode form. 
+The SiGa service supports signature creation with Estonian ID card/e-Seal, Estonian Mobile ID or Estonian Smart ID.
 
-If your e-service is currently using DigiDocService for container creation, take a look on DigiDocService comparision below to see what are the specific differences in business flow.
+## What can I do with SiGa?
 
-## What are the benefits?
+Once your information system is integrated with the SiGa service, you can
+* create containers in [ASiC-e or BDOC formats](https://www.id.ee/en/article/bdoc-cdoc-and-asice-digidoc-file-formats-4/)
+* add your electronic signature to a container holding any type of digital data (documents, spreadsheets, multimedia content etc.)
+* sign your data using a qualified signature creation device or a qualified signature creation mobile app, such as:
+  * [Estonian ID card](https://www.id.ee/en/article/id-card-and-its-uses/)
+  * [Estonian e-Seal](https://www.id.ee/en/article/we-recommend-using-an-e-seal-instead-of-mass-signing-with-the-id-card/)
+  * [Mobile ID](https://www.id.ee/en/article/using-mobile-id/)
+  * [Smart ID](https://www.smart-id.com/)
+* validate signed ASiC-e, BDOC, and DDOC containers
+* validate PAdES signatures*
 
-Digital Signature Gateway service offers unified API for container and signature creation. No need for extra integration with Mobile-ID or trust services. 
-API is platform independent and can be used in any e-service capable of handling JSON/REST API.
+*Transmission of full PDF files to the SiGa service is mandatory! For more information see our [Data Protection Terms](https://www.id.ee/en/article/data-protection-conditions-for-the-id-software-of-the-national-information-system-authority/).
 
-Only one contract is needed to get access container and signature creation. No need for handling contracts and billing with different parties. 
+## Whom is SiGa for?
 
-Digital Signature Gateway service is kept up to date with security patches and compliant with signature standards. E-service maintenance is limited to the updates for API integration. 
+The SiGa service is offered to all public sector organisations [listed](https://www.rahandusministeerium.ee/sites/default/files/avaliku_sektori_asutused_asutuse_liikide_loikes_.xlsx) (119.94 KB, XLSX) by [the Ministry of Finance of the Republic of Estonia](https://www.rahandusministeerium.ee/et/riigihaldus).
 
-## Whom is it for?
+## What does SiGa cost?
 
-The service can be used by all public sector authorities who are listed by the Rahandusministeerium. For specifics see [here](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus)
+The service is currently free for the above specified target audiences.
 
-## What does it cost?
+## What are the key benefits that we offer?
 
-Current price list can be found [here.](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus)
+SiGa offers unified API for container and signature creation. API is platform independent and can be used in any e-service capable of handling JSON/REST API.
 
-## How can I join?
+E-service maintenance is limited to the updates for API integration.
 
-Demo environment can be used by everybody, however production environment can be used only by public sector authorities specified [here.](#whom-is-it-for)
+We keep SiGa up-to-date with security patches and ensure compliance with [eSignature standards](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eSignature+standards). 
 
-Application for joining must be sent to help@ria.ee. Application forms can be found [here](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus)
+SiGa customers need to set up only one contract with RIA to access digital signing and validation services. No extra integration with Mobile ID, Smart ID, or trusted services is required.
 
-## Whats the difference between Digital Signature Gateway service and DigiDocService?
+SiGa uses the HASHCODE container form, which ensures
+* confidentiality of the signed data – SiGa neither processes nor stores the content of the signed data
+* no maximum limit on the size of the signed data
 
-Digital Signature Gateway service offers two different services for integration (JSON and SOAP). JSON based service is new signing service intended to replace DigiDocService.
-SOAP service is intended for legacy systems for easier transition. Both of the services have differences in functionality compared to DigiDocService.
+## How can I join the SiGa service?
 
-### Differences in functionality
+To join our service, you need to go through a two-step procedure:
+1. Register your e-service in our demo environment and conduct SiGa integration tests.
+2. Register your e-service in our production environment.
+You can find [application forms](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus) on RIA website. Submit your completed applications at help@ria.ee . 
 
-| **Functionality** | **DigiDocService** | **Digital Signature Gateway service** |  **Comment** | 
-|-------------------|--------------------|----------|--------------|
-| Container creation | Yes | Yes | Creating new containers |
-| Adding signatures | Yes | Yes | Adding signatures to containers |
-| Support for BDOC and ASICE containers | Yes | Yes | Supports the hashcode form |
-| Support for DDOC container | Yes | **No** | Not possible to use |
-| Container hashcode form | Yes | Yes | Same hashcode format |
-| Signing with external device | Yes | Yes | ID card, e-seal, ... (certificate must be in Estonian TSL) |
-| Signing with Mobile-ID | Yes | Yes | Digital Signature Gateway service supports only Estonian Mobile-ID |
-| Authentication with Mobile-ID | Yes | **No** | Digital Signature Gateway service is purely signing/container service, use TARA for authentication |
-| Verification of certificate validity | Yes | **No** | Not possible to validate |
-| Signature validation | Yes | Yes | Digital Signature Gateway service uses Valideerimisteenus (SIVA) for validation |
+## Can I use SiGa if my organisation is not part of the Estonian public sector?
 
-### Differences in protocol
-
-| **General differences** | **DigiDocService** | **Digital Signature Gateway service SOAP**  | **Digital Signature Gateway service JSON** |  **Comment** | 
-|-------------------------|--------------------|--------------------------------------|-------------------------------------|--------------|
-| Protocol | SOAP/XML | SOAP/XML | REST/JSON | JSON API is described in WADL |
-| Hashcode container format | DigiDocService | DigiDocService | DigiDocService | Same hahscode container format is used |
-| Access to service | IP based | IP based | HMAC based authorization | JSON service each request must be signed by e-service |
+Our service is currently only provided to the public sector organisations of the Republic of Estonia. However, the source code of Digital Signature Gateway service is [freely available](https://github.com/open-eid/SiGa/wiki) for anyone to use and to create your own digital signing solution.
 
 ## Additional questions?
 
-Feel free to write help@ria.ee for any questions about Digital Signature Gateway service.
+Feel free to contact us at help@ria.ee if you have any questions about Digital Signature Gateway service.
