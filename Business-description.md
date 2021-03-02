@@ -7,7 +7,7 @@ layout: default
 
 Digital Signature Gateway service is a back end service that interacts with other information services and systems. It means Signature Gateway service provides the functionality of creation and validation of electronic signatures, but does not offer any graphical user interface to end users. Thus, the graphic design and screen layout presented to end users, signers, will vary across the customers of Signature Gateway service (i.e. other information systems).
 
-To ensure confidentiality, Signature Gateway service processes the footprint of a document, also known as [hash](https://sectigostore.com/blog/what-is-a-digital-signature-and-how-does-the-digital-signature-process-work/), and not the document itself.
+To ensure confidentiality, Signature Gateway service processes the fingerprint of a document, also known as [hash](https://sectigostore.com/blog/what-is-a-digital-signature-and-how-does-the-digital-signature-process-work/), and not the document itself.
 The simplified document signing steps are as follows:
 1. Signature Gateway service receives the hash value and basic signature of a document to be signed.
 2. Signature Gateway service interacts with [trust services](https://www.id.ee/en/article/trust-services-what-are-they/) to collect the details that are mandatory elements of a [qualified electronic signature](https://www.id.ee/en/article/electronic-signatures-and-addressing-them-in-europe-2/), e.g. the timestamp and the validity confirmation of the signer’s [certificate](https://www.id.ee/en/article/certificates-what-are-they-and-why-do-i-need-them/).
