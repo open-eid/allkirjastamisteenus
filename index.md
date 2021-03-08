@@ -2,27 +2,19 @@
 layout: default
 ---
 
-## Welcome to the Digital Signature Gateway service (Riigi allkirjastamisteenus)!
+## Welcome to Digital Signature Gateway service (Riigi allkirjastamisteenus)!
 
-Digital Signature Gateway service enables easy integration for all needed functionality to create digitally signed files.
-Only one contract needed for all required functionality, no additional contracts for Mobile-ID, TimeStamping or other trust services.
+Digital Signature Gateway service (Estonian: Riigi allkirjastamisteenus) is a web service that enables easy integration of the [EU eIDAS Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.257.01.0073.01.ENG) compliant [qualified electronic signatures](https://www.id.ee/en/article/electronic-signatures-and-addressing-them-in-europe-2/) into your information systems. The service was developed by [the Estonian Information System Authority (RIA)](https://www.ria.ee/en.html) in co-operation with [the European Regional Development Fund](https://ec.europa.eu/regional_policy/en/funding/erdf/) in 2020.
+
+RIA coordinates the development and administration of Digital Signature Gateway service as a crucial component of [the Estonian digital ecosystem](https://e-estonia.com/).
 
 
-![](/img/general.png)
 
-Offered functionality:
-* Creating ASICE/BDOC containers in HASHCODE form
-* Signature creation with Estonian id-card/e-token
-* Signing with Estonian Mobile-ID
-* Validating signed ASICE/BDOC/DDOC containers in HASHCODE form
 
-Digital Signature Gateway service uses HASHCODE container form. This gives the following advantages:
-* Confidentiality of signed data - the content of data files is not sent to Digital Signature Gateway service. 
-* Signed data file size is not relevant - large data files can be signed.
 
-Digital Signature Gateway service advantages over implementing signing service locally:
-* Platform independent API
-* No need for extra contracts for Time Stamping, OCSP and Mobile-ID.
-* Lower need of maintenance, API stays stable compared to the need of upgrades in signing libraries.
+
+
+
+
 
 ![](https://raw.githubusercontent.com/open-eid/SiGa/develop/docs/img/EL_Regionaalarengu_Fond_horisontaalne-vaike.jpg)
