@@ -46,10 +46,8 @@ We keep our service up-to-date with security patches and ensure compliance with 
 Customers of Digital Signature Gateway service need to set up only one contract with RIA to access digital signing and validation services. No extra integration with Mobile ID, Smart ID, or trusted services are required.
 
 Digital Signature Gateway service uses the HASHCODE container form, which ensures
-* confidentiality* of the signed data – the service neither processes nor stores the content of the signed data
+* confidentiality of the signed data – the service neither processes nor stores the content of the signed data
 * no maximum limit on the size of the signed data
-
-*See our [Data Protection Terms](https://www.id.ee/en/article/data-protection-conditions-for-the-id-software-of-the-national-information-system-authority/).
 
 ## How can I join Digital Signature Gateway service?
 
