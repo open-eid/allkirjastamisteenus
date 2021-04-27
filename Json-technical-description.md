@@ -33,7 +33,7 @@ The authorization mechanism is described [here](https://github.com/open-eid/SiGa
 | Support for BDOC and ASICE containers | Yes | Yes | Only **hashcode** form. |
 | Signing with external device | Yes | Yes | ID card, e-seal, ... (certificate must be in Estonian TSL). |
 | Signing with Mobile-ID | Yes | Yes | Only Estonian Mobile-ID. |
-| Signing with Smart-ID | Yes | **No** | No support. |
+| Signing with Smart-ID | Yes | Yes | Only QSCD level accounts are supported. |
 | Signature validation | Yes | Yes | Validation of DDOC containers in **hashcode** form is also supported. Keep in mind that DDOC hashcode form differs from "standard" hashcode form. |
 
 ## Hashcode container form
@@ -59,7 +59,11 @@ Digital Signature Gateway service supports subset of API methods supported by [S
 | Start remote signing | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#start-remote-signing) | Initiating signing process |
 | Finish remote signing | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#finalize-remote-signing) | Finalize signing process |
 | Start Mobile-ID signing | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#start-mobile-id-signing) | Initiating Mobile-ID signing process |
-| Get Mobile-ID signing status | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-mobile-id-signing-status) | Finalize Mobile-ID signing process |
+| Get Mobile-ID signing status | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-mobile-id-signing-status) | Getting Mobile-ID signing process status |
+| Trigger certificate selection for Smart-ID signing | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#trigger-certificate-selection-for-smart-id-signing) | Requesting certificate to be used in signing process |
+| Get Smart-ID certificate selection status | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-certificate-selection-status) | Getting status for certificate choice |
+| Start Smart-ID signing | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#start-smart-id-signing) | Initiating Smart-ID signing process |
+| Get Smart-ID signing status | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-smart-id-signing-status) | Getting Smart-ID signing process status|
 | Get signature list | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-signature-list-of-given-hashcode-container) | Retrieving signers list |
 | Get signers information | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-signer-info-on-given-signature) | Retrieving signers information |
 | Validate container in session | [See details](https://github.com/open-eid/SiGa/wiki/Hashcode-API-description#request-validation-of-hashcode-container-in-session) | Validating container in session |

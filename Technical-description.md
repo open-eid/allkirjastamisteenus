@@ -108,7 +108,7 @@ ZIP container, it can be manipulated with standard ZIP libraries. However, speci
 ### Integration with signature creation devices
 
 To use remote signing in Digital Signature Gateway service, integrating service must implement retrieving public certificate and signing hashes with the signature creation device. 
-The integrations required are signature creation device specific (it can be e-seal using PKCS11, ID-Card with HWCrypto or Smart-ID with Smart-ID API) 
+The integrations required are signature creation device specific (for example it can be e-seal using PKCS11 or ID-Card with HWCrypto) 
 
 ### Additional consideration
 
