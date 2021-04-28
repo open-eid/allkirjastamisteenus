@@ -33,7 +33,7 @@ The authorization mechanism is described [here](https://github.com/open-eid/SiGa
 | Support for BDOC and ASICE containers | Yes | Yes | Only **hashcode** form. |
 | Signing with external device | Yes | Yes | ID card, e-seal, ... (certificate must be in Estonian TSL). |
 | Signing with Mobile-ID | Yes | Yes | Only Estonian Mobile-ID. |
-| Signing with Smart-ID | Yes | Yes | Only QSCD level accounts are supported. |
+| Signing with Smart-ID | Yes | Yes | Only QSCD level accounts are supported (accounts created after 08.11.2018). |
 | Signature validation | Yes | Yes | Validation of DDOC containers in **hashcode** form is also supported. Keep in mind that DDOC hashcode form differs from "standard" hashcode form. |
 
 ## Hashcode container form
