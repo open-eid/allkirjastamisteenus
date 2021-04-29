@@ -58,7 +58,7 @@ Given the BDOC format, the container should be transformed to the HASCODE form i
 
 The first hash file contains the SHA-256 hashes of all of the signed files. Similarly, the second file contains SHA-512 hashes for the same files. Both files have the same format: for every signed file, a full path is listed (as it appears in the BDOC file), the hash of the file in Base64, and also the length of the file in bytes. (The XML-schema is below). Hash values are calculated directly on the file contents (i.e., not over XML elements, which is different from the HASHCODE form for DDOC).
 
-As an example, if the container has 2 documents, named " [file1.txt](http://www.id.ee/bdoc_hashcode/file1.txt)" and " [File2.docx](http://www.id.ee/bdoc_hashcode/File2.docx)" (the sample files are downloadable from [http://www.id.ee/public/bdoc\_hashcode\_example.zip](http://www.id.ee/public/bdoc_hashcode_example.zip)), the corresponding hash files have the following contents:
+As an example, if the container has 2 documents, named " [file1.txt](http://www.id.ee/bdoc_hashcode/file1.txt)" and " [File2.docx](http://www.id.ee/bdoc_hashcode/File2.docx)" (the sample files are downloadable from [https://www.id.ee/wp-content/uploads/2021/04/bdoc\_hashcode\_example.zip](https://www.id.ee/wp-content/uploads/2021/04/bdoc_hashcode_example.zip)), the corresponding hash files have the following contents:
 
 **META-INF/hashcodes-sha256.xml:**
 
@@ -117,7 +117,7 @@ After these steps, the HASHCODE form is ready. The contents of the BDOC file wil
 └── mimetype
 ```
 
-The files in this example are downloadable (with BDOC containers) from the following address: [http://www.id.ee/public/bdoc\_hashcode\_example.zip](http://www.id.ee/public/bdoc_hashcode_example.zip)
+The files in this example are downloadable (with BDOC containers) from the following address: [https://www.id.ee/wp-content/uploads/2021/04/bdoc\_hashcode\_example.zip](https://www.id.ee/wp-content/uploads/2021/04/bdoc_hashcode_example.zip)
 
 #### Transforming the BDOC container back to standard form
 
@@ -257,7 +257,7 @@ Now the file is ready for digital signing.
 > **NB!** Only container formats DIGIDOC-XML 1.3 and BDOC 2.1 are supported. If an inappropriate combination of given 
 > format and version number is used in request parameters, a SOAP error object with error message "Invalid format and version combination!" will be returned.
 
-The description of DigiDoc formats are available on the webpage [http://www.id.ee/index.php?id=36108](http://www.id.ee/index.php?id=36108) .
+The description of DigiDoc formats are available on the webpage [https://www.id.ee/en/rubriik/digital-signing/](https://www.id.ee/en/rubriik/digital-signing/) .
 
 #### Response
 
@@ -1111,7 +1111,7 @@ When a container has warnings, the signatures are considered legally valid (and 
 - 176 ERR\_ISSUER\_XMLNS – The XML elements X509IssuerName and/or X509SerialNumber are lacking namespace attributes.
 - 177 ERR\_OLD\_VER – The container version is not supported anymore. Adding signatures is not allowed.
 
-For more information about warnings, please refer to the JDigiDoc library documentation: [http://www.id.ee/public/SK-JDD-PRG-GUIDE.pdf](http://www.id.ee/public/SK-JDD-PRG-GUIDE.pdf) , chapter "Validation status VALID WITH WARNINGS".
+For more information about warnings, please refer to the JDigiDoc library documentation: [https://www.id.ee/wp-content/uploads/2021/04/sk-jdd-prg-guide.pdf](https://id.ee/wp-content/uploads/2021/04/sk-jdd-prg-guide.pdf) , chapter "Validation status VALID WITH WARNINGS".
 
 The warnings are only visible in responses under the SignatureInfo elements. The Status element under SignatureInfo has the value "OK", but there is also an "Error" element present, whose category is set to "WARNING". The warning is specified in the "Code" and "Description" elements.
 
