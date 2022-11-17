@@ -19,7 +19,7 @@ Following chapters describe offered functionality.
 
 ## Access to the service
 
-Accessing the service is restricted, it is needed to register for usage. See [Information System Authority](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus) webpage for registration info.
+Accessing the service is restricted, it is needed to register for usage. See [Information System Authority](https://www.ria.ee/riigi-infosusteem/elektrooniline-identiteet-ja-usaldusteenused/digiallkirja-serverteenused#allkirjastamisteenus) webpage for registration info.
 
 The authorization mechanism is described [here](https://github.com/open-eid/SiGa/wiki/Authorization). Upon registration service specific UUID and signing secret are provided through secure channel.
 

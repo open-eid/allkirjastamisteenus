@@ -116,7 +116,7 @@ Please check [here](https://github.com/open-eid/SiGa/wiki/Best-practices) for ad
 
 ## Testing the integration
 
-Successful integration with [Demo environment](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus) is requirement for using Digital Signature Gateway service in production.
+Successful integration with [Demo environment](https://www.ria.ee/riigi-infosusteem/elektrooniline-identiteet-ja-usaldusteenused/digiallkirja-serverteenused#allkirjastamisteenus) is requirement for using Digital Signature Gateway service in production.
 For development and learning purposes it is possible to set up the Signature Gateway software using [Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) on local premises.
 However, Digital Signature Gateway service does not offer Signature Gateway full functionality. There may also be version differences between service and available software. 
 For acceptance testing it is recommended to always use Demo environment.

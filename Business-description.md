@@ -54,7 +54,7 @@ Digital Signature Gateway service uses the HASHCODE container form, which ensure
 To join our service, you need to go through a two-step procedure:
 1. Register your e-service in our demo environment and conduct Digital Signature Gateway service integration tests.
 2. Register your e-service in our production environment.
-You can find [application forms](https://www.ria.ee/et/riigi-infosusteem/eid/partnerile.html#allkirjastamisteenus) on RIA website. Submit your completed applications at help@ria.ee . 
+You can find [application forms](https://www.ria.ee/riigi-infosusteem/elektrooniline-identiteet-ja-usaldusteenused/digiallkirja-serverteenused#allkirjastamisteenus) on RIA website. Submit your completed applications at help@ria.ee . 
 
 ## Can I use Digital Signature Gateway service if my organisation is not part of the Estonian public sector?
 
