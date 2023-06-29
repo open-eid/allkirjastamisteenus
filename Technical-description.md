@@ -12,7 +12,7 @@ layout: default
 
 ## Introduction
 
-Below are generalized examples of user signing process in an e-service. ID-card signing flows use [HWCrypto library](https://github.com/hwcrypto/hwcrypto.js) for
+Below are generalized examples of user signing process in an e-service. ID-card signing flows use [Web eID library](https://github.com/web-eid/web-eid.js) for
 front-end communication with ID-card. The sequences in this chapter are for demonstration, the actual flow and implementation should be based on integrating e-service
 requirements and architecture.
 
@@ -40,13 +40,13 @@ In this example e-service handles all actions regarding to-be-signed data files 
 
 ![](../img/ID_card_flow.png)
 
-*(1) Digital Signature Gateway service needs signers certificate for signature creation. In this example [HWCrypto getCertificate()](https://github.com/hwcrypto/hwcrypto.js/wiki/APIv2#getcertificate) is used to fetch the certificate.
+*(1) Digital Signature Gateway service needs signers certificate for signature creation. In this example, [Web eID's getSigningCertificate()](https://github.com/web-eid/web-eid.js#get-signing-certificate) method is used to fetch the certificate.
 It is important that **signing certificate** (nonrepudiation key-usage must be present) is fetched. Signing process can not be completed with authentication certificate. 
 
-*(2) This step is needed by the [HWCrypto](https://github.com/hwcrypto/hwcrypto.js/wiki/APIv2#sign) as it requires hash value. Other signing libraries may require raw data, in that case dataToSign may only be base64 decoded
+*(2) This step is needed by the [Web eID](https://github.com/web-eid/web-eid.js#sign) as it requires hash value. Other signing libraries may require raw data, in that case dataToSign may only be base64 decoded
 before sending to signing.
 
-*(3) Signing with private key. In this example [HWCrypto sign()](https://github.com/hwcrypto/hwcrypto.js/wiki/APIv2#sign) is used. Conversion of hash algorithm form is required to match HWCrypto. 
+*(3) Signing with private key. In this example [Web eID's sign()](https://github.com/web-eid/web-eid.js#sign) is used. Conversion of hash algorithm's name is required to match an [allowed hashFunction value for Web eID](https://github.com/web-eid/web-eid.js#sign-parameters). 
 
 
 ### 2. Signing files with Mobile-ID
@@ -108,7 +108,7 @@ ZIP container, it can be manipulated with standard ZIP libraries. However, speci
 ### Integration with signature creation devices
 
 To use remote signing in Digital Signature Gateway service, integrating service must implement retrieving public certificate and signing hashes with the signature creation device. 
-The integrations required are signature creation device specific (for example it can be e-seal using PKCS11 or ID-Card with HWCrypto) 
+The integrations required are signature creation device specific (for example it can be e-seal using PKCS11 or ID-Card with Web eID) 
 
 ### Additional consideration
 
