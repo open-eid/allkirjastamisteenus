@@ -18,7 +18,7 @@ Our service supports signature creation with Estonian ID card/e-Seal, Estonian M
 ## What can I do with Signature Gateway service?
 
 Once your information system is integrated with Digital Signature Gateway service, you can
-* create containers in [ASiC-e or BDOC formats](https://www.id.ee/en/article/bdoc-cdoc-and-asice-digidoc-file-formats-4/)
+* create containers in [ASiC-e format](https://www.id.ee/en/article/bdoc-cdoc-and-asice-digidoc-file-formats-4/)
 * add your electronic signature to a container holding any type of digital data (documents, spreadsheets, multimedia content etc.)
 * sign your data using a qualified signature creation device or a qualified signature creation mobile app, such as:
   * [Estonian ID card](https://www.id.ee/en/article/id-card-and-its-uses/)

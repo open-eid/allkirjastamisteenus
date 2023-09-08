@@ -16,7 +16,7 @@ Below are generalized examples of user signing process in an e-service. ID-card 
 front-end communication with ID-card. The sequences in this chapter are for demonstration, the actual flow and implementation should be based on integrating e-service
 requirements and architecture.
 
-The example code in JAVA with explicit API demonstration can be found [here](https://github.com/open-eid/SiGa/tree/master/siga-sample-application) together with [instructions how to run the Signature Gateway with Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) for learning purposes.
+The example code in JAVA with explicit API demonstration can be found [here](https://github.com/open-eid/SiGa-demo-application) together with [instructions how to run the Signature Gateway with Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) for learning purposes.
 
 ## Usage flows from user perspective
 
@@ -102,7 +102,7 @@ Digital Signature Gateway service supports only hashcode form. Therefor ability 
 
 ### Converting container to and from hashcode form
 
-Digital Signature Gateway service handles containers in hashcode form. Integrating service needs to be able to manipulate the container content by adding and removing files in it. ASICE/BDOC container is 
+Digital Signature Gateway service handles containers in hashcode form. Integrating service needs to be able to manipulate the container content by adding and removing files in it. ASICE container is 
 ZIP container, it can be manipulated with standard ZIP libraries. However, special care must be taken on some aspects of the container [described here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form)
 
 ### Integration with signature creation devices
