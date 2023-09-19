@@ -1,0 +1,142 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            0e:64:6e:26:6b:46:71:de:23:e8:78:aa:43:3c:34:87
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = US, O = DigiCert Inc, CN = DigiCert Global G2 TLS RSA SHA256 2020 CA1
+        Validity
+            Not Before: Aug 31 00:00:00 2023 GMT
+            Not After : Sep 30 23:59:59 2024 GMT
+        Subject: C = EE, L = Tallinn, O = Riigi Infos\C3\BCsteemi Amet, CN = *.eesti.ee
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (384 bit)
+                pub:
+                    04:21:b2:63:64:3e:4c:7e:3a:5d:d8:fe:85:0e:e3:
+                    5c:96:73:74:86:9f:f5:00:d5:ab:d3:9c:0a:eb:f3:
+                    65:fc:12:11:fe:ba:fb:d3:6a:d5:d9:8d:7b:ba:80:
+                    6e:90:70:38:4e:f0:a1:37:73:fc:60:c1:e5:a0:af:
+                    93:71:79:a3:cb:e0:90:a5:14:2d:61:4b:e6:fa:67:
+                    a8:6c:dd:0d:59:27:4a:18:04:aa:b5:7f:42:e0:4e:
+                    91:61:02:9c:b3:69:97
+                ASN1 OID: secp384r1
+                NIST CURVE: P-384
+        X509v3 extensions:
+            X509v3 Authority Key Identifier:
+                keyid:74:85:80:C0:66:C7:DF:37:DE:CF:BD:29:37:AA:03:1D:BE:ED:CD:17
+
+            X509v3 Subject Key Identifier:
+                1F:DB:78:58:C2:52:5E:2F:D7:B4:32:DA:0D:40:82:AB:C9:C0:E6:87
+            X509v3 Subject Alternative Name:
+                DNS:*.eesti.ee, DNS:eesti.ee
+            X509v3 Key Usage: critical
+                Digital Signature
+            X509v3 Extended Key Usage:
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 CRL Distribution Points:
+
+                Full Name:
+                  URI:http://crl3.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crl
+
+                Full Name:
+                  URI:http://crl4.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crl
+
+            X509v3 Certificate Policies:
+                Policy: 2.23.140.1.2.2
+                  CPS: http://www.digicert.com/CPS
+
+            Authority Information Access:
+                OCSP - URI:http://ocsp.digicert.com
+                CA Issuers - URI:http://cacerts.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crt
+
+            X509v3 Basic Constraints:
+                CA:FALSE
+            CT Precertificate SCTs:
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:
+                                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B
+                    Timestamp : Aug 31 07:06:03.528 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:EB:91:0D:16:C7:D8:5F:F8:C6:3F:B8:
+                                A6:C4:B5:B8:DE:DA:82:89:F1:26:94:97:EE:5D:66:F4:
+                                2A:49:5F:F8:24:02:20:45:0C:41:AE:A0:48:A3:50:F7:
+                                50:DC:CE:62:6D:5E:98:B1:75:B8:EB:8F:2D:EE:69:11:
+                                D1:6E:7A:5E:23:59:60
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : 48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:
+                                1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73
+                    Timestamp : Aug 31 07:06:03.121 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:21:00:B1:04:DE:3D:3B:F7:9E:F0:AF:65:8B:
+                                B2:8C:E4:8E:65:CF:7A:96:2E:E6:9F:E2:4D:9C:7A:E6:
+                                46:2D:3B:8E:DA:02:20:0A:4B:55:68:67:49:8C:B2:C6:
+                                14:73:09:98:B3:91:41:EF:DC:CD:9D:55:B9:AD:70:F8:
+                                85:E4:52:16:FA:53:F4
+                Signed Certificate Timestamp:
+                    Version   : v1 (0x0)
+                    Log ID    : DA:B6:BF:6B:3F:B5:B6:22:9F:9B:C2:BB:5C:6B:E8:70:
+                                91:71:6C:BB:51:84:85:34:BD:A4:3D:30:48:D7:FB:AB
+                    Timestamp : Aug 31 07:06:03.161 2023 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:20:3A:EA:BD:E9:EB:8E:F4:06:9D:7B:94:7A:
+                                1D:FA:4D:18:47:22:65:47:DB:81:6F:A8:32:6B:2D:3A:
+                                5D:D8:A8:05:02:21:00:EC:69:F7:6E:F2:79:66:90:DA:
+                                CD:EE:1F:2E:BA:A5:57:06:AC:AF:F4:9F:EE:D1:65:3C:
+                                D1:D0:31:3C:21:81:89
+    Signature Algorithm: sha256WithRSAEncryption
+         68:26:13:4c:5e:92:a6:cd:58:5d:d0:fa:90:a8:98:92:c9:5a:
+         c7:3a:a5:e8:3f:c5:f4:89:a8:83:8a:49:5d:16:47:ef:27:b9:
+         90:7b:86:38:f1:5f:9d:44:04:a8:ec:e2:3a:ca:59:0a:eb:17:
+         d8:1c:f8:0c:ae:08:fe:87:38:71:09:cc:c5:01:c8:0d:d1:78:
+         1f:f1:92:ff:66:81:6d:4f:d1:e1:4b:2d:83:19:1d:e0:f0:9d:
+         c4:e9:fa:95:5b:b1:f1:a1:43:09:12:ab:34:1a:d4:17:5f:fd:
+         ef:44:ad:36:e8:7c:b5:ab:72:62:f0:c4:7a:7c:02:d0:5d:e5:
+         da:14:41:43:71:58:64:c6:24:47:d1:fc:14:cd:f5:e1:af:ec:
+         19:24:fa:95:08:8a:26:ad:a1:af:38:8c:5a:29:4e:c0:ac:5c:
+         f3:c3:01:cf:d1:fd:09:8a:c4:b0:23:08:eb:98:87:bd:60:3c:
+         9e:3a:1f:c5:26:1d:33:93:47:87:14:f1:84:72:a7:ea:a6:71:
+         1d:28:e2:42:f1:7d:79:d5:18:4d:0e:30:c1:37:33:98:7b:aa:
+         61:8d:aa:c5:88:7a:59:4c:d1:c9:a2:92:7a:78:3d:7d:ef:19:
+         55:97:63:3b:09:82:6b:d6:5d:82:34:18:31:96:c3:7b:33:2d:
+         fa:84:69:d9
+-----BEGIN CERTIFICATE-----
+MIIGGzCCBQOgAwIBAgIQDmRuJmtGcd4j6HiqQzw0hzANBgkqhkiG9w0BAQsFADBZ
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE
+aWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjMw
+ODMxMDAwMDAwWhcNMjQwOTMwMjM1OTU5WjBXMQswCQYDVQQGEwJFRTEQMA4GA1UE
+BxMHVGFsbGlubjEhMB8GA1UECgwYUmlpZ2kgSW5mb3PDvHN0ZWVtaSBBbWV0MRMw
+EQYDVQQDDAoqLmVlc3RpLmVlMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEIbJjZD5M
+fjpd2P6FDuNclnN0hp/1ANWr05wK6/Nl/BIR/rr702rV2Y17uoBukHA4TvChN3P8
+YMHloK+TcXmjy+CQpRQtYUvm+meobN0NWSdKGASqtX9C4E6RYQKcs2mXo4IDjTCC
+A4kwHwYDVR0jBBgwFoAUdIWAwGbH3zfez70pN6oDHb7tzRcwHQYDVR0OBBYEFB/b
+eFjCUl4v17Qy2g1AgqvJwOaHMB8GA1UdEQQYMBaCCiouZWVzdGkuZWWCCGVlc3Rp
+LmVlMA4GA1UdDwEB/wQEAwIHgDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUH
+AwIwgZ8GA1UdHwSBlzCBlDBIoEagRIZCaHR0cDovL2NybDMuZGlnaWNlcnQuY29t
+L0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3JsMEigRqBE
+hkJodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vRGlnaUNlcnRHbG9iYWxHMlRMU1JT
+QVNIQTI1NjIwMjBDQTEtMS5jcmwwPgYDVR0gBDcwNTAzBgZngQwBAgIwKTAnBggr
+BgEFBQcCARYbaHR0cDovL3d3dy5kaWdpY2VydC5jb20vQ1BTMIGHBggrBgEFBQcB
+AQR7MHkwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBRBggr
+BgEFBQcwAoZFaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0R2xv
+YmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3J0MAkGA1UdEwQCMAAwggF+Bgor
+BgEEAdZ5AgQCBIIBbgSCAWoBaAB2AO7N0GTV2xrOxVy3nbTNE6Iyh0Z8vOzew1FI
+WUZxH7WbAAABikpp0YgAAAQDAEcwRQIhAOuRDRbH2F/4xj+4psS1uN7agonxJpSX
+7l1m9CpJX/gkAiBFDEGuoEijUPdQ3M5ibV6YsXW4648t7mkR0W56XiNZYAB2AEiw
+42vapkc0D+VqAvqdMOscUgHLVt0sgdm7v6s52IRzAAABikppz/EAAAQDAEcwRQIh
+ALEE3j07957wr2WLsozkjmXPepYu5p/iTZx65kYtO47aAiAKS1VoZ0mMssYUcwmY
+s5FB79zNnVW5rXD4heRSFvpT9AB2ANq2v2s/tbYin5vCu1xr6HCRcWy7UYSFNL2k
+PTBI1/urAAABikpp0BkAAAQDAEcwRQIgOuq96euO9Aade5R6HfpNGEciZUfbgW+o
+MmstOl3YqAUCIQDsafdu8nlmkNrN7h8uuqVXBqyv9J/u0WU80dAxPCGBiTANBgkq
+hkiG9w0BAQsFAAOCAQEAaCYTTF6Sps1YXdD6kKiYkslaxzql6D/F9Imog4pJXRZH
+7ye5kHuGOPFfnUQEqOziOspZCusX2Bz4DK4I/oc4cQnMxQHIDdF4H/GS/2aBbU/R
+4Ustgxkd4PCdxOn6lVux8aFDCRKrNBrUF1/970StNuh8tatyYvDEenwC0F3l2hRB
+Q3FYZMYkR9H8FM314a/sGST6lQiKJq2hrziMWilOwKxc88MBz9H9CYrEsCMI65iH
+vWA8njofxSYdM5NHhxTxhHKn6qZxHSjiQvF9edUYTQ4wwTczmHuqYY2qxYh6WUzR
+yaKSeng9fe8ZVZdjOwmCa9ZdgjQYMZbDezMt+oRp2Q==
+-----END CERTIFICATE-----
