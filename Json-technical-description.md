@@ -43,7 +43,7 @@ In addition this enables to sign large data files as hashcode representation of 
 
 The details how to convert ASICE/BDOC containers to and from hashcode form can be found [here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form)
 
-For validation of DDOC containers in hashcode form different conversion must be made. This is described [here.](../ddoc-hashcode-form)
+For validation of DDOC containers in hashcode form different conversion must be made. This is described [here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form#transforming-ddoc-container-to-hashcode-form)
 
 ## Hashcode API description
 

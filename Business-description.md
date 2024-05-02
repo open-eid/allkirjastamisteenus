@@ -10,7 +10,7 @@ Digital Signature Gateway service is a back end service that interacts with othe
 To ensure confidentiality, Digital Signature Gateway service processes the fingerprint of a document, also known as [hash](https://sectigostore.com/blog/what-is-a-digital-signature-and-how-does-the-digital-signature-process-work/), and not the document itself.
 The simplified document signing steps are as follows:
 1. Digital Signature Gateway service receives the hash value and basic signature of a document to be signed.
-2. Digital Signature Gateway service interacts with [trust services](https://www.id.ee/en/article/trust-services-what-are-they/) to collect the details that are mandatory elements of a [qualified electronic signature](https://www.id.ee/en/article/electronic-signatures-and-addressing-them-in-europe-2/), e.g. the timestamp and the validity confirmation of the signer’s [certificate](https://www.id.ee/en/article/certificates-what-are-they-and-why-do-i-need-them/).
+2. Digital Signature Gateway service interacts with [trust services](https://www.id.ee/en/article/trust-services-what-are-they/) to collect the details that are mandatory elements of a [qualified electronic signature](https://www.id.ee/en/article/electronic-signatures-and-addressing-them-in-europe/), e.g. the timestamp and the validity confirmation of the signer’s [certificate](https://www.id.ee/en/article/certificates-what-are-they-and-why-do-i-need-them/).
 3. Digital Signature Gateway service returns the correctly signed container to the signer.
 
 Our service supports signature creation with Estonian ID card/e-Seal, Estonian Mobile ID or Estonian Smart ID.
@@ -29,7 +29,7 @@ Once your information system is integrated with Digital Signature Gateway servic
 
 ## Whom is Digital Signature Gateway service for?
 
-Digital Signature Gateway service is offered to all public sector organisations [listed](https://www.rahandusministeerium.ee/sites/default/files/avaliku_sektori_asutused_asutuse_liikide_loikes_.xlsx) (119.94 KB, XLSX) by [the Ministry of Finance of the Republic of Estonia](https://www.rahandusministeerium.ee/et/riigihaldus).
+Digital Signature Gateway service is offered to all public sector organisations [listed](https://www.fin.ee/sites/default/files/documents/2023-02/Avaliku_sektori_asutused_asutuse_liikide_loikes%202022.xlsx) (298.93 KB, XLSX) by [the Ministry of Finance of the Republic of Estonia](https://www.fin.ee).
 
 ## What does Digital Signature Gateway service cost?
 
@@ -41,7 +41,7 @@ Digital Signature Gateway service offers unified API for container and signature
 
 E-service maintenance is limited to the updates for API integration.
 
-We keep our service up-to-date with security patches and ensure compliance with [eSignature standards](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eSignature+standards). 
+We keep our service up-to-date with security patches and ensure compliance with [eSignature standards](https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Standards+and+specifications). 
 
 Customers of Digital Signature Gateway service need to set up only one contract with RIA to access digital signing and validation services. No extra integration with Mobile ID, Smart ID, or trusted services are required.
 
