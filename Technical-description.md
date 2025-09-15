@@ -12,6 +12,11 @@ layout: default
 
 ## Introduction
 
+The Digital Signature Gateway service is built on the [Signature Gateway software (SiGa)](https://github.com/open-eid/SiGa/wiki),
+where more detailed information about SiGa is available.
+
+This service currently supports only _hashcode_ containers and does not include the full range of features offered by the SiGa software.
+
 Below are generalized examples of user signing process in an e-service. ID-card signing flows use [Web eID library](https://github.com/web-eid/web-eid.js) for
 front-end communication with ID-card. The sequences in this chapter are for demonstration, the actual flow and implementation should be based on integrating e-service
 requirements and architecture.
@@ -98,17 +103,20 @@ Digital Signature Gateway service offers [following methods](https://open-eid.gi
 
 ### Calculating data file hashes
 
-Digital Signature Gateway service supports only hashcode form. Therefor ability to calculate data file hashes is needed. The integrating service needs to calculate SHA256 and SHA512 hashes of data files.
+Digital Signature Gateway service supports only hashcode form. Therefor ability to calculate data file hashes is needed. 
+The integrating service needs to calculate SHA256 and SHA512 hashes of data files.
 
 ### Converting container to and from hashcode form
 
-Digital Signature Gateway service handles containers in hashcode form. Integrating service needs to be able to manipulate the container content by adding and removing files in it. ASICE container is 
-ZIP container, it can be manipulated with standard ZIP libraries. However, special care must be taken on some aspects of the container [described here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form)
+Digital Signature Gateway service handles containers in hashcode form. Integrating service needs to be able to manipulate 
+the container content by adding and removing files in it. ASiC-E container is ZIP container, 
+it can be manipulated with standard ZIP libraries. However, special care must be taken on some aspects of the container [described here.](https://github.com/open-eid/SiGa/wiki/Hashcode-container-form)
 
 ### Integration with signature creation devices
 
-To use remote signing in Digital Signature Gateway service, integrating service must implement retrieving public certificate and signing hashes with the signature creation device. 
-The integrations required are signature creation device specific (for example it can be e-seal using PKCS11 or ID-Card with Web eID) 
+To use remote signing in Digital Signature Gateway service, integrating service must implement retrieving public certificate 
+and signing hashes with the signature creation device. The integrations required are signature creation device specific 
+(for example it can be e-seal using PKCS11 or ID-Card with Web eID) 
 
 ### Additional consideration
 
@@ -133,7 +141,6 @@ The integrating application must ensure that users receive clear feedback during
 * **Authorization** - Be sure to check that correct [URL encoding rules](https://github.com/open-eid/SiGa/wiki/Authorization#url-encoding-rules) and charset encoding are used. Verify that different [HMAC algorithms](https://github.com/open-eid/SiGa/wiki/Authorization#headers) are supported.
 * **Hashcode container form** - Make sure that all data files are removed from hashcode container before sending to service. 
 Ensure that the final container is converted correctly to normal form by using DigiDoc4 client as reference (can not be used with test certificates for signature validation but it should not give any container errors).
-* **Mobile-ID signing** - Ensure that challengeID/verification code is correctly shown to customer. 
-Test the negative cases ([Mobile-ID testnumbers can be found here](https://github.com/SK-EID/MID/wiki/Test-number-for-automated-testing-in-DEMO)) and ensure that user is given correct feedback. 
+* **Mobile-ID** - Ensure that challengeID/verification code is correctly shown to customer. Test the negative cases with MID DEMO numbers and ensure that user is given correct feedback. 
 * **Signing with ID card** - Test insertion of card in different steps of the signing flow (before clicking sign, after clicking sign...).
 * **Validation result** - Test both valid and invalid containers to ensure that correct result is shown for user.
