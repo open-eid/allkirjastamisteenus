@@ -116,20 +116,24 @@ Please check [here](https://github.com/open-eid/SiGa/wiki/Best-practices) for ad
 
 ## Testing the integration
 
-Successful integration with [Demo environment](https://www.ria.ee/riigi-infosusteem/elektrooniline-identiteet-ja-usaldusteenused/digiallkirja-serverteenused#allkirjastamisteenus) is requirement for using Digital Signature Gateway service in production.
-For development and learning purposes it is possible to set up the Signature Gateway software using [Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) on local premises.
-However, Digital Signature Gateway service does not offer Signature Gateway full functionality. There may also be version differences between service and available software. 
-For acceptance testing it is recommended to always use Demo environment.
+Successful integration with [Demo environment](https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/services-digital-signatures) is requirement for using Digital Signature Gateway service in production.
 
-**NB!** It is only possible to test with TEST certificates in DEMO environment. This includes ID-Cards, Mobile-ID, e-Seals, etc. Signing certificate issuer must be present in [TEST TSL](https://github.com/open-eid/test-TL/blob/master/EE_T.xml) to be accepted by 
-Digital Signature Gateway service. You can order TEST ID-Card/TEST e-Seal [here](https://www.skidsolutions.eu/en/services/testcard/) and use Demo Mobile-ID numbers from [here](https://github.com/SK-EID/MID/wiki/Test-number-for-automated-testing-in-DEMO).
-You can activate and/or change the status of your TEST certificates in [here](https://demo.sk.ee/upload_cert/) to test signing with revoked/unknown certificate.
-Uploading your LIVE certificate to DEMO OCSP service or activating your LIVE Mobile-ID in DEMO MID service do NOT enable to usage of LIVE certificates in Digital Signature Gateway service. 
+For development and learning purposes it is possible to set up the Signature Gateway software using [Docker](https://github.com/open-eid/SiGa#running-siga-with-docker) on local premises.
+However, Digital Signature Gateway service does not offer Signature Gateway software full functionality. 
+There may also be version differences between service and available software. For acceptance testing it is recommended to always use Demo environment.
+
+**NB!** It is only possible to test with TEST certificates in DEMO environment. This includes ID-Cards, Mobile-ID, e-Seals, Smart-ID, etc. 
+More information about different testing options can be found [here](https://www.id.ee/en/article/service-testing-general-information/). 
 
 ### Special considerations for testing
 
-* Authorization - be sure to check that correct [URL encoding rules](https://github.com/open-eid/SiGa/wiki/Authorization#url-encoding-rules) and charset encoding is used. Verify that different [HMAC algorithms](https://github.com/open-eid/SiGa/wiki/Authorization#headers) are supported.
-* Hashcode container form - Make sure that all data files are removed from hashcode container before sending to service. Ensure that the final container is converted correctly to normal form by using DigiDoc4 client as reference (can not be used with test certificates for signature validation but it should not give any container errors).
-* Mobile-ID signing - Ensure that challengeID/verification code is correctly shown to customer. Test the negative cases ([Mobile-ID testnumbers can be found here](https://github.com/SK-EID/MID/wiki/Test-number-for-automated-testing-in-DEMO)) and ensure that user is given correct feedback. Also test timeouts as signing with Mobile-ID can take time. Ensure that user can not activate signing several times (by clicking the sign button repeatedly) on one signing process.
-* Signing with ID card - Test insertion of card in different steps of the signing flow (before clicking sign, after clicking sign...). Ensure that user can not activate signing several times (by clicking the sign button repeatedly) on one signing process.
-* Validation result - Test both valid and invalid containers to ensure that correct result is shown for user.
+* **Timeouts** - Signing can take time depending on signing method, the number of files in the container, etc. 
+All signing methods (ID-card, Mobile-ID, Smart-ID, etc.) must be tested with proper timeout handling. 
+The integrating application must ensure that users receive clear feedback during longer signing processes and cannot trigger multiple parallel signing actions on one signing process.
+* **Authorization** - Be sure to check that correct [URL encoding rules](https://github.com/open-eid/SiGa/wiki/Authorization#url-encoding-rules) and charset encoding are used. Verify that different [HMAC algorithms](https://github.com/open-eid/SiGa/wiki/Authorization#headers) are supported.
+* **Hashcode container form** - Make sure that all data files are removed from hashcode container before sending to service. 
+Ensure that the final container is converted correctly to normal form by using DigiDoc4 client as reference (can not be used with test certificates for signature validation but it should not give any container errors).
+* **Mobile-ID signing** - Ensure that challengeID/verification code is correctly shown to customer. 
+Test the negative cases ([Mobile-ID testnumbers can be found here](https://github.com/SK-EID/MID/wiki/Test-number-for-automated-testing-in-DEMO)) and ensure that user is given correct feedback. 
+* **Signing with ID card** - Test insertion of card in different steps of the signing flow (before clicking sign, after clicking sign...).
+* **Validation result** - Test both valid and invalid containers to ensure that correct result is shown for user.
