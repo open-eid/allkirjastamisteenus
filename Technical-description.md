@@ -122,6 +122,10 @@ and signing hashes with the signature creation device. The integrations required
 
 Please check [here](https://github.com/open-eid/SiGa/wiki/Best-practices) for additional implementation considerations.
 
+> [!NOTE] 
+> A SiGa session remains active for **5 minutes from the last update**.<br>
+> To ensure a smooth signing process, it is recommended to perform all signing actions in a single flow, rather than relying on session updates to extend the session lifetime.
+
 ## Testing the integration
 
 Successful integration with [Demo environment](https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/services-digital-signatures) is requirement for using Digital Signature Gateway service in production.
