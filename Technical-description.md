@@ -122,9 +122,11 @@ and signing hashes with the signature creation device. The integrations required
 
 Please check [here](https://github.com/open-eid/SiGa/wiki/Best-practices) for additional implementation considerations.
 
-> [!NOTE] 
-> A SiGa session remains active for **5 minutes from the last update**.<br>
-> To ensure a smooth signing process, it is recommended to perform all signing actions in a single flow, rather than relying on session updates to extend the session lifetime.
+<div style="border-left: 4px solid #0969da; padding: 0.75em 1em; background-color: #f6f8fa;">
+<strong style="color:#0969da;">Note</strong><br>
+A SiGa session remains active for <strong>5 minutes from the last update</strong>.<br>
+To ensure a smooth signing process, it is recommended to perform all signing actions in a single flow, rather than relying on session updates to extend the session lifetime.
+</div>
 
 ## Testing the integration
 
